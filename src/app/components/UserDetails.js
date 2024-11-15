@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+
 import axios from 'axios';
 import './UserDetails.css';
 
@@ -11,7 +11,7 @@ const UserDetails = () => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const router = useRouter();
+    
 
     // Fetch users from the API
     const fetchUsers = async () => {

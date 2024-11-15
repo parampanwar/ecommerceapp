@@ -2,7 +2,7 @@
 import { useState } from 'react'; // keeps track of form data
 import axios from 'axios'  // to make http request to fastapi server
 import './FormComponent.css'; 
-import LoginComponent from './LoginComponent';
+
 import Link from 'next/link';
 
 // User registration page  
