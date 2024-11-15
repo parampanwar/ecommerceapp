@@ -6,6 +6,7 @@ import './LoginComponent.css';
 import FormComponents from './FormComponents';
 import UserDetails from './UserDetails'
 import React, { useEffect } from 'react';
+import { debugPort } from 'process';
 const LoginComponent = () => {
     useEffect(() => {
         document.title = 'Login';
@@ -28,6 +29,7 @@ const LoginComponent = () => {
             const response = await axios.post('http://localhost:8000/login', formData);
             console.log('Logged In:', response.data);
             setIsLoggedIn(true); // Show FormComponents after login
+            router.push('/users'); // Redirect to the users page
         } catch (error) {
             setError('Invalid email or password');
         } finally {
@@ -65,7 +67,7 @@ const LoginComponent = () => {
                     required
                 />
             </div>
-            <button type="submit" disabled={loading}>{loading ? 'Logging in...' : 'Login'}</button>
+            <button type="submit" disabled={loading}>{'Login'}</button>
             {error && <p className="error-message">{error}</p>}
         </form>
         </div>

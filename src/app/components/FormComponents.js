@@ -98,7 +98,7 @@ return(
                 required
             />
         </div>
-        <button type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</button>
+        <button type="submit" disabled={loading}>{'Submit'}</button>
             {submitted && <p className="success-message">Form submitted successfully!</p>} 
             {error && <p className="error-message">{error}</p>}  
         
