@@ -1,8 +1,7 @@
-// next.config.js or next.config.ts
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'standalone',
+  trailingSlash: true, // Optional, helps with routing issues
 };
 
-export default nextConfig;
+module.exports = nextConfig;
